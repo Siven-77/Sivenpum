@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siven | Portfolio</title>
+  <!-- CSS style -->
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <!-- <nav class="navbar fixed-top custom-nav">
+    <div class="container justify-content-center">
+      <nav class="navbar fixed-top custom-nav">
+        <div class="container d-flex justify-content-center position-relative">
+          <div class="mini-profile-container">
+            <img src="../image/IMG_3405.jpg" class="mini-profile" alt="mini-profile">
+          </div>
+        </div>
+      </nav>
+      <ul class="navbar-nav nav-pill shadow-sm px-3 py-2 rounded-pill d-flex flex-row">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav> -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar">
+        <i class="bi bi-list fs-1"></i>
+      </button>
+
+      <!-- Mini Profile -->
+      <div class="mini-profile-container" style="float: left;">
+        <img src="../image/IMG_3405.jpg" class="mini-profile" alt="mini-profile">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav shadow-sm px-3 py-2 rounded-pill flex-row bg-white">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div class="d-block d-sm-none offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+        style="width: 300px;">
+        <div class="offcanvas-header">
+          <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            ☰ Menu
+          </button>
+        </div>
+        <div class="offcanvas-body d-block d-sm-none mb-3">
+          <ul class="navbar-nav mt-3 align-items-start w-100">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home">
+    <div class="container">
+
+      <img src="../image/IMG_3405.jpg" class="profile-img" alt="profile">
+
+      <h1 class="fw-bold">Hi, I'm Pum Siven.</h1>
+      <p class="lead mt-3">
+        <em>Front-end Developer</em>, constantly fueling my passion for learning.
+        I'm always on the lookout for new things to try.
+      </p>
+
+      <div class="social-icons mt-4">
+        <a href="#"><i class="bi bi-github"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("scroll", () => {
+      const scrollThreshold = 100; // Adjust this based on when you want the icon to appear
+
+      if (window.scrollY > scrollThreshold) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
+
+  </script>
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p class="mt-3">
+        I am a student learning web development using HTML, CSS, Bootstrap.
+        I enjoy creating responsive and clean UI designs.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // Navbar  Link for Mobile
+    const navLinksClick = document.querySelectorAll('.nav-link');
+    const menuToggle = document.getElementById('navbarNav');
+    const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+
+    navLinksClick.forEach((l) => {
+      l.addEventListener('click', () => {
+        if (window.innerWidth < 992) { bsCollapse.hide(); }
+      });
+    });
+  </script>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5>Personal Portfolio</h5>
+              <p>Responsive portfolio using Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container text-center">
+      <h2>Skills</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="skill-box mt-4">HTML</div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-box mt-4">CSS</div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-box mt-4">Bootstrap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <div class="container text-center">
+      <h2>Experience</h2>
+      <p class="mt-3">Student / Junior Front-end Developer</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-5">
+    <div class="container px-4">
+      <h2 class="text-center fw-bold mb-4">Contact Me</h2>
+      <p class="text-center text-secondary mb-5">Feel free to reach out to me at <br><strong>sivenpum@gmail.com</strong>
+      </p>
+
+      <div class="mx-auto" style="max-width: 500px;">
+        <input type="email" class="form-control mb-3" placeholder="Your email">
+        <textarea class="form-control mb-4" rows="5" placeholder="Your message"></textarea>
+        <button class="btn btn-submit w-100"><i class="bi bi-send me-2"></i>Submit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THEME TOGGLE ===== -->
+  <button id="themeToggle" class="theme-btn">🌙</button>
+
+  <!-- ===== JS ===== -->
+  <script>
+    /* Auto highlight navbar */
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    /* Dark / Light toggle */
+    const toggle = document.getElementById("themeToggle");
+    toggle.onclick = () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    };
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
